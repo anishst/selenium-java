@@ -1,11 +1,14 @@
 pipeline {
     agent any
 
-    stage("Build") {
-        steps {
-            sh "mvn -version"
-            sh "mvn clean install"
-        
+    stages {
+
+        stage("Build") {
+            steps {
+                sh "mvn -version"
+                sh "mvn clean install"
+            
+            }
         }
     }
     post {
